@@ -1,0 +1,139 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <form class="form-horizontal" method="post" action="#">
+
+      <div class="form-group">
+      	<label for="email" class="cols-sm-2 control-label">Warengruppe</label>
+      	<div class="cols-sm-10">
+      		<div class="input-group">
+      			<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+      			<select class="form-control" name="email" id="email"  placeholder="Enter your Email">
+              <option>Warengruppe</option>
+              <option>Warengruppeewogjwop</option>
+            </select>
+      		</div>
+      	</div>
+      </div>
+
+    <div class="form-group">
+    	<label for="bezeichnung" class="cols-sm-2 control-label">Bezeichnung</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+    			<input type="text" class="form-control" name="bezeichnung" id="bezeichnung"  placeholder="Bezeichnung"/>
+    		</div>
+    	</div>
+    </div>
+
+
+    <div class="form-group">
+    	<label for="username" class="cols-sm-2 control-label">Lager</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+    			<input type="text" class="form-control" name="username" id="username"  placeholder="Wieviele sind im Lager"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="password" class="cols-sm-2 control-label">Nebenlager</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="text" class="form-control" name="password" id="password"  placeholder="Wieviele sind im Nebenlager"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Gewicht</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Länge</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Leistung</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Artikelnummer</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Hersteller/Lieferant</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Preis EK</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Preis VK</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="form-group">
+    	<label for="confirm" class="cols-sm-2 control-label">Lagerort</label>
+    	<div class="cols-sm-10">
+    		<div class="input-group">
+    			<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+    			<input type="password" class="form-control" name="confirm" id="confirm"  placeholder="#"/>
+    		</div>
+    	</div>
+    </div>
+
+
+    <div class="form-group ">
+    	<button type="button" class="btn btn-primary btn-lg btn-block login-button">Erstellen</button>
+    </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

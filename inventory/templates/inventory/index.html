@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Inventar</h1>
+      <a href="#" class="btn btn-primary">Einzeleinbuchung</a>
+      <a href="#" class="btn btn-primary">Piloteinbuchung</a>
+      <a href="#" class="btn btn-primary">Gruppen</a>
+      Search: <input type="text">
+
+      <hr/>
+      {% if all_inventory_items %}
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Bezeichnung</th>
+                <th>Warengruppe</th>
+                <th>Gewicht</th>
+                <th>Länge</th>
+                <th>Leistung</th>
+                <th>Artikelnummer</th>
+                <th>Hersteller / Lieferant</th>
+                <th>Preis EK</th>
+                <th>Preis VK</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for inventory in all_inventory_items %}
+                <tr>
+                  <td><a href="/inventory/{{ inventory.id }}/">{{ inventory.identifier }}</a></td>
+                  <td>{{ inventory.material.bezeichnung }}</td>
+                  <td>{{ inventory.material.warengruppe }}</td>
+                  <td>{{ inventory.material.gewicht }}</td>
+                  <td>{{ inventory.material.laenge }}</td>
+                  <td>{{ inventory.material.leistung }}</td>
+                  <td>{{ inventory.material.artikelnummer }}</td>
+                  <td>{{ inventory.material.hersteller_lieferant }}</td>
+                  <td>{{ inventory.material.preis_ek }}</td>
+                  <td>{{ inventory.material.preis_vk }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
