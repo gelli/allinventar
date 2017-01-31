@@ -1,3 +1,4 @@
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
@@ -5,6 +6,10 @@ from django.template import loader
 from django.contrib import messages
 
 from .models import InventoryItem
+from .models import MaterialGroup
+
+from .forms import NewEinzelbuchungForm
+
 
 # Create your views here.
 
@@ -26,7 +31,16 @@ def detail(request, item_id):
 
 
 def new(request):
-    return render(request, "inventory/new.html", {})
+    if request.method == 'POST':
+        form = NewEinzelbuchungForm(request.POST)
+        if form.is_valid():
+            print("form is valid")
+            return HttpResponseRedirect('/inventory/')
+    else:
+        form = NewEinzelbuchungForm()
+
+    return render(request, 'inventory/new.html', {'form': form})
+
 
 def newpilot(request):
     return render(request, "inventory/newpilot.html", {})
